@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Admin\.bundlewatch.config.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\.eslintrc.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\.stylelintrc.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\composer.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\package-lock.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\package.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\src\html\.eslintrc.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\src\html\.tsconfig.json" />
+    <_ContentIncludedByDefault Remove="Views\Admin\tsconfig.json" />
+  </ItemGroup>
+
 </Project>
