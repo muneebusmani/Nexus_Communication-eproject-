@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace NexusCommunication.Controllers;
 
-public class HomeController : Controller
+public class AccountsController : Controller
 {
     // GET
     public IActionResult Index()

@@ -1,0 +1,84 @@
+<script type="text/javascript">
+    function goBack() {
+        window.history.go(-1);
+    }
+</script>
+<link rel="stylesheet" href="~/css/admin/nav_admin.css">
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar bg-light p-0">
+                <div class="sidebar-sticky h-100">
+                    <a href="#" class="w-100">
+                        <img style="height: 135px;width:100%" src="favicon.ico" alt="">
+                    </a>
+                    <ul class="nav flex-column">
+                        <button class="goBack mt-3" type="button" onclick="goBack();">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <br>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#profileSubMenu" data-bs-toggle="collapse" aria-expanded="false">
+                                <i class="fas special fa-user"></i>
+                                <span class="main-link">Profile</span>
+                            </a>
+                            <ul class="collapse" id="profileSubMenu">
+                                <li>
+                                    <a class="nav-link " href="#" data-toggle="collapse" aria-expanded="false">
+                                        <i class="fas special fa-graduation-cap"></i>
+                                        <span class="main-link">Credentials</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link " href="#" data-toggle="collapse" aria-expanded="false">
+                                        <i class="fas special fa-graduation-cap"></i>
+                                        <span class="main-link"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-target="#optionsSubMenu" data-bs-toggle="collapse" aria-expanded="false">
+                                <i class="fas special fa-cog"></i>
+                                <span class="main-link">Plans</span>
+                            </a>
+                            <ul class="collapse show" id="optionsSubMenu">
+                                <li>
+                                    <a class="nav-link " href="#" data-toggle="collapse" aria-expanded="false">
+                                        <i class="fas special fa-map-marker-alt"></i>
+                                        <span class="main-link">Add a Plan</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link " href="#" data-toggle="collapse" aria-expanded="false">
+                                        <i class="fas special fa-graduation-cap"></i>
+                                        <span class="main-link">Update Plans</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link " href="#" data-toggle="collapse" aria-expanded="false">
+                                        <i class="fas special fa-graduation-cap"></i>
+                                        <span class="main-link">Search Plans</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link " href="#" data-toggle="collapse" aria-expanded="false">
+                                        <i class="fas special fa-graduation-cap"></i>
+                                        <span class="main-link">Delete Plans</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <form class="nav-link" method="post">
+                                <button type="submit" class="btn text-left text-primary d-inline" style="padding:0 0 1rem 0; font-weight:normal;"><i class="fas special fa-sign-out-alt text-primary"></i>Sign Out</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</div>

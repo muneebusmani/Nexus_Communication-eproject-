@@ -1,0 +1,52 @@
+
+/* suppress CssUnresolvedCustomProperty */
+.goBack {
+    width: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid;
+}
+
+nav.sidebar {
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+
+.nav-link {
+    padding: 10px 0;
+
+}
+
+.nav {
+    --padding-x: 2vw;
+    padding-left: var(--padding-x);
+    padding-right: var(--padding-x);
+     scrollbar-width:none;;
+}
+
+.special {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+}
+
+li {
+    list-style: none;
+}
+ul{
+    padding-left: 1rem;
+}
+@media screen and (min-width:1400px) {
+    :root{
+        --height:calc(135 - (70*135)/100);
+    }
+}
+@media screen and (max-width:1400px) {
+    :root{
+        --height:calc(135 - (50*135)/100);
+    }
+}
+::-webkit-scrollbar {
+    display: none;
+}
