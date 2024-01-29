@@ -1,15 +1,16 @@
 using Microsoft.EntityFrameworkCore;
-using Project.Areas.Admin.Data;
 
-var builder = WebApplication.CreateBuilder(args);
+using Project.Data;
+
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<AdminDbContext>(option =>
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
     option.UseSqlite(connectionString)
 );
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
