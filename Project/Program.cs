@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 using Project.Data;
@@ -6,10 +7,11 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
-    option.UseSqlite(connectionString)
+    option.UseSqlServer(connectionString)
 );
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,15 +27,17 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
     "areas",
-    "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    "{area:exists}/{controller=Accounts}/{action=Index}/{id?}"
 );
 
 app.MapControllerRoute(
     "default",
-    "{controller=Home}/{action=Index}/{id?}"
+    "{controller=Accounts}/{action=Index}/{id?}"
 );
 app.Run();

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Project.Areas.Retail.Controllers;
+namespace Project.Areas.Admin.Controllers;
 
-[Area("Retail")]
-public class HomeController : Controller
+[Area("Admin")]
+public class AdminController : Controller
 {
     // GET
     public IActionResult Index()

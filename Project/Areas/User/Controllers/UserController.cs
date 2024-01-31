@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Project.Areas.Accounts.Controllers;
+namespace Project.Areas.User.Controllers;
 
-public class HomeController : Controller
+public class UserController : Controller
 {
     // GET
     public IActionResult Index()
