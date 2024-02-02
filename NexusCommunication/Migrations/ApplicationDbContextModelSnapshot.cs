@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Project.Data;
+using NexusCommunication.Data;
 
 #nullable disable
 
-namespace Project.Migrations
+namespace NexusCommunication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -220,7 +220,7 @@ namespace Project.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Project.Models.Admin", b =>
+            modelBuilder.Entity("NexusCommunication.Entities.Admin", b =>
                 {
                     b.Property<int>("AdminId")
                         .ValueGeneratedOnAdd()
@@ -258,87 +258,7 @@ namespace Project.Migrations
                     b.ToTable("Admin");
                 });
 
-            modelBuilder.Entity("Project.Models.Billing", b =>
-                {
-                    b.Property<int>("BillId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BillId"));
-
-                    b.Property<string>("BillAmount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OrderId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PaymentDetails")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("BillId");
-
-                    b.ToTable("Billing");
-                });
-
-            modelBuilder.Entity("Project.Models.Charges", b =>
-                {
-                    b.Property<int>("ChargeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ChargeId"));
-
-                    b.Property<string>("ConnectionType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PlanDetails")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<float>("SecurityDeposit")
-                        .HasColumnType("real");
-
-                    b.HasKey("ChargeId");
-
-                    b.ToTable("Charges");
-                });
-
-            modelBuilder.Entity("Project.Models.Connections", b =>
-                {
-                    b.Property<int>("ConnectionId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ConnectionId"));
-
-                    b.Property<string>("ConnectionDetails")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ConnectionId");
-
-                    b.ToTable("Connections");
-                });
-
-            modelBuilder.Entity("Project.Models.Customers", b =>
+            modelBuilder.Entity("NexusCommunication.Entities.Customers", b =>
                 {
                     b.Property<int>("CustomerId")
                         .ValueGeneratedOnAdd()
@@ -369,7 +289,7 @@ namespace Project.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("Project.Models.Employees", b =>
+            modelBuilder.Entity("NexusCommunication.Entities.Employees", b =>
                 {
                     b.Property<int>("EmployeeId")
                         .ValueGeneratedOnAdd()
@@ -402,7 +322,87 @@ namespace Project.Migrations
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("Project.Models.Feedback", b =>
+            modelBuilder.Entity("NexusCommunication.Models.Billing", b =>
+                {
+                    b.Property<int>("BillId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BillId"));
+
+                    b.Property<string>("BillAmount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentDetails")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BillId");
+
+                    b.ToTable("Billing");
+                });
+
+            modelBuilder.Entity("NexusCommunication.Models.Charges", b =>
+                {
+                    b.Property<int>("ChargeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ChargeId"));
+
+                    b.Property<string>("ConnectionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PlanDetails")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("SecurityDeposit")
+                        .HasColumnType("real");
+
+                    b.HasKey("ChargeId");
+
+                    b.ToTable("Charges");
+                });
+
+            modelBuilder.Entity("NexusCommunication.Models.Connections", b =>
+                {
+                    b.Property<int>("ConnectionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ConnectionId"));
+
+                    b.Property<string>("ConnectionDetails")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ConnectionId");
+
+                    b.ToTable("Connections");
+                });
+
+            modelBuilder.Entity("NexusCommunication.Models.Feedback", b =>
                 {
                     b.Property<int>("FeedbackId")
                         .ValueGeneratedOnAdd()
@@ -428,7 +428,7 @@ namespace Project.Migrations
                     b.ToTable("Feedback");
                 });
 
-            modelBuilder.Entity("Project.Models.Orders", b =>
+            modelBuilder.Entity("NexusCommunication.Models.Orders", b =>
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
@@ -458,7 +458,7 @@ namespace Project.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Project.Models.Plans", b =>
+            modelBuilder.Entity("NexusCommunication.Models.Plans", b =>
                 {
                     b.Property<int>("PlanId")
                         .ValueGeneratedOnAdd()
@@ -488,7 +488,7 @@ namespace Project.Migrations
                     b.ToTable("Plans");
                 });
 
-            modelBuilder.Entity("Project.Models.Products", b =>
+            modelBuilder.Entity("NexusCommunication.Models.Products", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
@@ -516,7 +516,7 @@ namespace Project.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Project.Models.RetailShops", b =>
+            modelBuilder.Entity("NexusCommunication.Models.RetailShops", b =>
                 {
                     b.Property<string>("ShopId")
                         .HasColumnType("nvarchar(450)");
@@ -534,7 +534,7 @@ namespace Project.Migrations
                     b.ToTable("RetailShops");
                 });
 
-            modelBuilder.Entity("Project.Models.Vendors", b =>
+            modelBuilder.Entity("NexusCommunication.Models.Vendors", b =>
                 {
                     b.Property<int>("VendorId")
                         .ValueGeneratedOnAdd()

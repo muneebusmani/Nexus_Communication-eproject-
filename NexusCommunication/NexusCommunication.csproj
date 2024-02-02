@@ -5,10 +5,10 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
-
     <ItemGroup>
         <PackageReference Include="bootstrap" Version="5.3.2"/>
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.1" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
             <PrivateAssets>all</PrivateAssets>
@@ -16,18 +16,12 @@
         </PackageReference>
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0"/>
     </ItemGroup>
-
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Accounts\Views\Accounts\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Admin\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Admin\_ViewStart.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Shared\_Layout.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Shared\_ViewImports.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Shared\_ViewStart.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Retail\Views\Retail\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\User\Views\User\Index.cshtml" />
+      <AdditionalFiles Include="Views\Admin\Index.cshtml" />
+      <AdditionalFiles Include="Views\Admin\_Admin.cshtml" />
+      <AdditionalFiles Include="Views\Admin\_ViewStart.cshtml" />
+      <AdditionalFiles Include="Views\Customer\Index.cshtml" />
+      <AdditionalFiles Include="Views\Employee\Index.cshtml" />
     </ItemGroup>
 
 </Project>

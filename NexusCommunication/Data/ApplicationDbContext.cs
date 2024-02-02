@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-using Project.Models;
-using Project.Entities;
+using NexusCommunication.Models;
+using NexusCommunication.Entities;
 
-namespace Project.Data;
+namespace NexusCommunication.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {
