@@ -1,23 +1,21 @@
 using NexusCommunication.Entities;
-using NexusCommunication.Models;
 using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class AccountsRepository:BaseRepository,IAccounts
+public class BaseRepository:IBase
 {
-
-    public Task<int> CreateBill(Billing bill)
+    public Task<int> SignUp(Entity credentials)
     {
         throw new NotImplementedException();
     }
 
-    public Task<int> UpdateBill(Billing bill)
+    public Task<int> SignIn(Entity credentials)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Billing> SearchBill(Billing bill)
+    public Task<int> UpdateProfile(Entity credentials)
     {
         throw new NotImplementedException();
     }

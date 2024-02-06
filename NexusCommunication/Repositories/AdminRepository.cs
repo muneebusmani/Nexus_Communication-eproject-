@@ -6,22 +6,8 @@ using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class AdminRepository : IAdmin
+public class AdminRepository : BaseRepository,IAdmin
 {
-    public Task<int> SignUp(Entity credentials)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> SignIn(Entity credentials)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdateProfile(Entity credentials)
-    {
-        throw new NotImplementedException();
-    }
 
     public Task<List<Plans>> GetPlans()
     {

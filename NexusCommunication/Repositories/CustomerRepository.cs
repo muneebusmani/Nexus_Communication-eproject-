@@ -4,22 +4,9 @@ using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class CustomerRepository: ICustomer
+public class CustomerRepository:BaseRepository, ICustomer
 {
-    public Task<int> SignUp(Entity credentials)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> SignIn(Entity credentials)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdateProfile(Entity credentials)
-    {
-        throw new NotImplementedException();
-    }
+    
 
     public Task<int> PlaceOrder(int id)
     {
