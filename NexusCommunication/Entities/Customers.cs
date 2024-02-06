@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace NexusCommunication.Entities;
 
 [Index(nameof(AccountId), IsUnique = true)]
-public class Customers
+public class Customers:Entity
 {
     [Required] [Key] public int CustomerId { get; set; }
     [Required] public string Name { get; set; } = "";

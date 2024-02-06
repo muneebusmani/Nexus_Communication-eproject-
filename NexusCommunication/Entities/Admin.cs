@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NexusCommunication.Entities;
 
-public class Admin
+public class Admin:Entity
 {
     [Key]
     [Required]
