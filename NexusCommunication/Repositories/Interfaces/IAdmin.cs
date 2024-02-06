@@ -1,9 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
-
-using NexusCommunication.Entities;
 using NexusCommunication.Models;
 
-namespace NexusCommunication.Repositories;
+namespace NexusCommunication.Repositories.Interfaces;
 
 public interface IAdmin:IBase
 {

@@ -1,10 +1,9 @@
 using NexusCommunication.Entities;
-using NexusCommunication.Models;
 using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class CustomerRepository: ICustomer
+public class RetailRepository:IRetail
 {
     public Task<int> SignUp(Entity credentials)
     {
@@ -17,16 +16,6 @@ public class CustomerRepository: ICustomer
     }
 
     public Task<int> UpdateProfile(Entity credentials)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> PlaceOrder(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Orders> CheckOrderStatus(int id)
     {
         throw new NotImplementedException();
     }

@@ -4,7 +4,7 @@ using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class CustomerRepository: ICustomer
+public class AccountsRepository:IAccounts
 {
     public Task<int> SignUp(Entity credentials)
     {
@@ -21,12 +21,17 @@ public class CustomerRepository: ICustomer
         throw new NotImplementedException();
     }
 
-    public Task<int> PlaceOrder(int id)
+    public Task<int> CreateBill(Billing bill)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Orders> CheckOrderStatus(int id)
+    public Task<int> UpdateBill(Billing bill)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Billing> SearchBill(Billing bill)
     {
         throw new NotImplementedException();
     }

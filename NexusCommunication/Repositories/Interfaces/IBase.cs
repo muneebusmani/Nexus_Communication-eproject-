@@ -1,6 +1,6 @@
 using NexusCommunication.Entities;
 
-namespace NexusCommunication.Repositories;
+namespace NexusCommunication.Repositories.Interfaces;
 
 public interface IBase
 {

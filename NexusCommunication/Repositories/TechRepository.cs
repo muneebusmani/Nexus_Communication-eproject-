@@ -1,8 +1,9 @@
 using NexusCommunication.Entities;
+using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class EmployeeRepository : IEmployee
+public class TechRepository:Itech
 {
     public Task<int> SignUp(Entity credentials)
     {

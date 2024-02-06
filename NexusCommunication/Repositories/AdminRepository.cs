@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 using NexusCommunication.Entities;
 using NexusCommunication.Models;
+using NexusCommunication.Repositories.Interfaces;
+
 namespace NexusCommunication.Repositories;
 
 public class AdminRepository : IAdmin

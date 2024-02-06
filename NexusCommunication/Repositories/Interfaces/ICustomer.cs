@@ -1,6 +1,6 @@
 using NexusCommunication.Models;
 
-namespace NexusCommunication.Repositories;
+namespace NexusCommunication.Repositories.Interfaces;
 
 public interface ICustomer:IBase
 {
