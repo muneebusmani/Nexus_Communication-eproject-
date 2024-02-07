@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NexusCommunication.Entities;
 
-public class Admin:Entity
+public class Admin : Entity
 {
     [Key]
     [Required]
@@ -27,13 +27,13 @@ public class Admin:Entity
     [StringLength(100)]
     [DisplayName("Email address:")]
     public string Email { get; set; } = "";
-    
+
     [DataType(DataType.PhoneNumber)]
     [Required]
     [DisplayName("Contact number:")]
     [StringLength(13)]
     public string Phone { get; set; } = "";
-    
+
     [DataType(DataType.Password)]
     [StringLength(40, MinimumLength = 8, ErrorMessage = "Password Must be 8-40 characters long.")]
     [Required]

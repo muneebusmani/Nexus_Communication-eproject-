@@ -1,12 +1,11 @@
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-using NexusCommunication.Models;
 using NexusCommunication.Entities;
+using NexusCommunication.Models;
 
 namespace NexusCommunication.Data;
 
-public class ApplicationDbContext : IdentityDbContext
+public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)

@@ -25,14 +25,14 @@ public class Staff
 
     [Required] [PasswordPropertyText] public required string Password { get; set; } = "";
 
+    [Required(ErrorMessage = "Role Is Necessary to Register yourself")]
+    [CustomValidation(typeof(Staff), "ValidateRole", ErrorMessage = "Invalid role.")]
+
+    public required string Role { get; set; } = "";
+
     public static bool ValidateRole(string Role)
     {
         List<String> roles = new() { "Accounts", "Admin", "Retail", "User" };
         return roles.Contains(Role);
     }
-
-    [Required(ErrorMessage = "Role Is Necessary to Register yourself")]
-    [CustomValidation(typeof(Staff), "ValidateRole", ErrorMessage = "Invalid role.")]
-
-    public required string Role { get; set; } = "";
 }

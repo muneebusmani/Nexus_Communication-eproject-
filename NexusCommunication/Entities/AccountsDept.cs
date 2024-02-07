@@ -1,8 +1,5 @@
-using NexusCommunication.Models;
-
 namespace NexusCommunication.Entities;
 
-public class AccountsDept:Employees
+public class AccountsDept : Employees
 {
-
 }

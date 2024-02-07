@@ -1,6 +1,5 @@
 namespace NexusCommunication.Entities;
 
-public class RetailDept:Employees
+public class RetailDept : Employees
 {
-    
 }

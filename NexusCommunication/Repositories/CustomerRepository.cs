@@ -1,12 +1,15 @@
+using NexusCommunication.Data;
 using NexusCommunication.Entities;
+using NexusCommunication.Interfaces;
 using NexusCommunication.Models;
-using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class CustomerRepository:BaseRepository, ICustomer
+public class CustomerRepository : GenericRepository<Customers>, ICustomerRepository
 {
-    
+    public CustomerRepository(ApplicationDbContext context) : base(context)
+    {
+    }
 
     public Task<int> PlaceOrder(int id)
     {
@@ -14,6 +17,11 @@ public class CustomerRepository:BaseRepository, ICustomer
     }
 
     public Task<Orders> CheckOrderStatus(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<int> SignIn(Entity credentials)
     {
         throw new NotImplementedException();
     }

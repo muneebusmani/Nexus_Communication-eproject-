@@ -1,36 +1,37 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+using NexusCommunication.Services;
 
-using NexusCommunication.Data;
+namespace NexusCommunication;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(option =>
-    option.UseSqlServer(connectionString)
-);
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+public static class Program
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    public static void Main(string[] args)
+    {
+        WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+        #region Services
+
+        builder.Services.AddControllersWithViews();
+        builder.Services.AddDatabase(builder.Configuration);
+        builder.Services.AddRepositories();
+        builder.Services.ConfigureSession();
+
+        #endregion
+
+        WebApplication app = builder.Build();
+
+        #region Extensions
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+        app.UseRouting();
+        app.UseAuthorization();
+        app.MapControllerRoute(
+            "default",
+            "{controller=Home}/{action=Index}/{id?}"
+        );
+
+        #endregion
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.Run();

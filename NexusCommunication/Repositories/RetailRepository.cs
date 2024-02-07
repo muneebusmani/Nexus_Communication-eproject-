@@ -1,9 +1,16 @@
+using NexusCommunication.Data;
 using NexusCommunication.Entities;
-using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class RetailRepository:BaseRepository,IRetail
+public class RetailRepository : GenericRepository<RetailDept>
 {
+    public RetailRepository(ApplicationDbContext context) : base(context)
+    {
+    }
 
+    public Task<int> SignIn(Entity credentials)
+    {
+        throw new NotImplementedException();
+    }
 }

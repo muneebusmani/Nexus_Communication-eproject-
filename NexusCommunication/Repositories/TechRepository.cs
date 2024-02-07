@@ -1,8 +1,16 @@
+using NexusCommunication.Data;
 using NexusCommunication.Entities;
-using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class TechRepository:BaseRepository,Itech
+public class TechRepository : GenericRepository<TechDept>
 {
+    public TechRepository(ApplicationDbContext context) : base(context)
+    {
+    }
+
+    public Task<int> SignIn(Entity credentials)
+    {
+        throw new NotImplementedException();
+    }
 }

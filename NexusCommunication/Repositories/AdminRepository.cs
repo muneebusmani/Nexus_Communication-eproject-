@@ -1,65 +1,15 @@
-using Microsoft.AspNetCore.Mvc;
-
+using NexusCommunication.Data;
 using NexusCommunication.Entities;
-using NexusCommunication.Models;
-using NexusCommunication.Repositories.Interfaces;
 
 namespace NexusCommunication.Repositories;
 
-public class AdminRepository : BaseRepository,IAdmin
+public class AdminRepository : GenericRepository<Admin>
 {
-
-    public Task<List<Plans>> GetPlans()
+    public AdminRepository(ApplicationDbContext context) : base(context)
     {
-        throw new NotImplementedException();
     }
 
-    public Task<Plans> GetPlansById(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Plans> GetPlansByName(string name)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> AddPlan(Plans plan)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdatePlan(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdatePlanDescription(int id, string description)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdatePlanName(int id, string name)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdatePlanCharges(int id, string charges)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdatePlanLimit(int id, string limit)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> UpdatePlanSpeed(int id, string speed)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<int> DeletePlan(int id)
+    public Task<int> SignIn(Entity credentials)
     {
         throw new NotImplementedException();
     }
