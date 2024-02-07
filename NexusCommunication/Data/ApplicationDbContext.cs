@@ -13,7 +13,6 @@ public class ApplicationDbContext : DbContext
     }
 
 
-    public DbSet<Admin> Admin { get; set; }
     public DbSet<Billing> Billing { get; set; }
     public DbSet<Charges> Charges { get; set; }
     public DbSet<Connections> Connections { get; set; }

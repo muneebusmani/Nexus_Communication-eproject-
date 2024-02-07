@@ -17,11 +17,11 @@
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0"/>
     </ItemGroup>
     <ItemGroup>
-        <AdditionalFiles Include="Views\Admin\Index.cshtml"/>
-        <AdditionalFiles Include="Views\Admin\_Admin.cshtml"/>
-        <AdditionalFiles Include="Views\Admin\_ViewStart.cshtml"/>
         <AdditionalFiles Include="Views\Customer\Index.cshtml"/>
-        <AdditionalFiles Include="Views\Employee\Index.cshtml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <_ContentIncludedByDefault Remove="Views\Employee\Admin\_Layout.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Employee\Admin\_ViewStart.cshtml"/>
     </ItemGroup>
 
 </Project>

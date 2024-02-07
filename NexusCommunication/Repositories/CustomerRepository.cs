@@ -5,12 +5,9 @@ using NexusCommunication.Models;
 
 namespace NexusCommunication.Repositories;
 
-public class CustomerRepository : GenericRepository<Customers>, ICustomerRepository
+public class CustomerRepository(ApplicationDbContext context)
+    : GenericRepository<Customers>(context), ICustomerRepository
 {
-    public CustomerRepository(ApplicationDbContext context) : base(context)
-    {
-    }
-
     public Task<int> PlaceOrder(int id)
     {
         throw new NotImplementedException();
@@ -21,7 +18,7 @@ public class CustomerRepository : GenericRepository<Customers>, ICustomerReposit
         throw new NotImplementedException();
     }
 
-    public Task<int> SignIn(Entity credentials)
+    public Task<int> SignIn(Customers credentials)
     {
         throw new NotImplementedException();
     }

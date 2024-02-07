@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 
+using NexusCommunication.Interfaces;
+
 namespace NexusCommunication.Controllers;
 
-public class EmployeeController : Controller
+public class EmployeeController(IUnitOfWork unitOfWork) : Controller
 {
-    // GET
-    public IActionResult Index()
+    private readonly IUnitOfWork _unitOfWork = unitOfWork;
+
+    public IActionResult SignUp()
     {
         return View();
     }
