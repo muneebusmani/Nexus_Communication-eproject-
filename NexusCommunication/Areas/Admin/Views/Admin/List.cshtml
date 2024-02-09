@@ -1,0 +1,59 @@
+@model IEnumerable<NexusCommunication.Models.Plans>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlanName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Charges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Limit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Speed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlanName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Charges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Limit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Speed)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PlanId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PlanId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PlanId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

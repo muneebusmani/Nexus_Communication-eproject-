@@ -56,9 +56,13 @@ public static class Program
         app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthorization();
+        // app.MapControllerRoute(
+        //     "default",
+        //     "{controller=Home}/{action=Index}/{id?}"
+        // );
         app.MapControllerRoute(
-            "default",
-            "{controller=Home}/{action=Index}/{id?}"
+            "areas",
+            "{area:exists}/{controller=Home}/{action=Index}/{id?}"
         );
 
         #endregion

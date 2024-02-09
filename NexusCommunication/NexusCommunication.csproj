@@ -22,6 +22,16 @@
     <ItemGroup>
         <_ContentIncludedByDefault Remove="Views\Employee\Admin\_Layout.cshtml"/>
         <_ContentIncludedByDefault Remove="Views\Employee\Admin\_ViewStart.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Employee\Departments\Admin\_Layout.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Employee\Departments\Admin\_ViewStart.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Employee\Departments\Retail\_Layout.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Employee\Departments\Retail\_ViewStart.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Employee\Departments\Tech\_Layout.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Employee\Departments\Tech\_ViewStart.cshtml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Areas\Retail\Views\Retail\"/>
+        <Folder Include="Areas\Tech\Views\Tech\"/>
     </ItemGroup>
 
 </Project>

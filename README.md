@@ -60,10 +60,16 @@
 - maintain details about products and equipment used for the connections.
 
 #### retail dept. ppl
+##### In Summary:
+- Read Orders.
+- Read Customers.
+- Read Connections.
+- Read Charges.
+- Read Bills.
 
 ##### Order Tracking:
 
-- Orders placed up to the current date.
+
 - Status of these orders, whether they are feasible or not.
 - Information on whether the customer received the connection or not.
 
