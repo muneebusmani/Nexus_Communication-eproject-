@@ -1,0 +1,10 @@
+@model List<NexusCommunication.Areas.Retail.Models.Order>
+
+@foreach (var item in Model)
+{
+    <p>Order Id: @item.OrderId</p>
+    <p>Customer Id: @item.CustomerId</p>
+    <p>Account Id: @item.AccountId</p>
+    <p>Status: @item.Status</p>
+    <p>Email: @item.Email</p>
+}

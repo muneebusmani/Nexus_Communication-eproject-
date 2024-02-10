@@ -17,6 +17,12 @@
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0"/>
     </ItemGroup>
     <ItemGroup>
+        <AdditionalFiles Include="Areas\Tech\Views\Connections\CreateConnection.cshtml"/>
+        <AdditionalFiles Include="Areas\Tech\Views\Connections\EditConnection.cshtml"/>
+        <AdditionalFiles Include="Areas\Tech\Views\Connections\ListConnections.cshtml"/>
+        <AdditionalFiles Include="Areas\Tech\Views\Connections\ViewConnection.cshtml"/>
+        <AdditionalFiles Include="Areas\Tech\Views\Orders\ListOrders.cshtml"/>
+        <AdditionalFiles Include="Areas\Tech\Views\Orders\UpdateOrder.cshtml"/>
         <AdditionalFiles Include="Views\Customer\Index.cshtml"/>
     </ItemGroup>
     <ItemGroup>
@@ -30,8 +36,109 @@
         <_ContentIncludedByDefault Remove="Views\Employee\Departments\Tech\_ViewStart.cshtml"/>
     </ItemGroup>
     <ItemGroup>
-        <Folder Include="Areas\Retail\Views\Retail\"/>
-        <Folder Include="Areas\Tech\Views\Tech\Connections\" />
+        <None Include="wwwroot\Home\contactform\contactform.js"/>
+        <None Include="wwwroot\Home\contactform\Readme.txt"/>
+        <None Include="wwwroot\Home\css\scss-files.txt"/>
+        <None Include="wwwroot\Home\css\style.css"/>
+        <None Include="wwwroot\Home\img\about-bg.jpg"/>
+        <None Include="wwwroot\Home\img\about-mission.jpg"/>
+        <None Include="wwwroot\Home\img\about-plan.jpg"/>
+        <None Include="wwwroot\Home\img\about-vision.jpg"/>
+        <None Include="wwwroot\Home\img\apple-touch-icon.png"/>
+        <None Include="wwwroot\Home\img\call-to-action-bg.jpg"/>
+        <None Include="wwwroot\Home\img\clients\client-1.png"/>
+        <None Include="wwwroot\Home\img\clients\client-2.png"/>
+        <None Include="wwwroot\Home\img\clients\client-3.png"/>
+        <None Include="wwwroot\Home\img\clients\client-4.png"/>
+        <None Include="wwwroot\Home\img\clients\client-5.png"/>
+        <None Include="wwwroot\Home\img\clients\client-6.png"/>
+        <None Include="wwwroot\Home\img\clients\client-7.png"/>
+        <None Include="wwwroot\Home\img\clients\client-8.png"/>
+        <None Include="wwwroot\Home\img\facts-bg.jpg"/>
+        <None Include="wwwroot\Home\img\facts-img.png"/>
+        <None Include="wwwroot\Home\img\favicon.png"/>
+        <None Include="wwwroot\Home\img\intro-carousel\1.jpg"/>
+        <None Include="wwwroot\Home\img\intro-carousel\2.jpg"/>
+        <None Include="wwwroot\Home\img\intro-carousel\3.jpg"/>
+        <None Include="wwwroot\Home\img\intro-carousel\4.jpg"/>
+        <None Include="wwwroot\Home\img\intro-carousel\5.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\app1.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\app2.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\app3.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\card1.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\card2.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\card3.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\web1.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\web2.jpg"/>
+        <None Include="wwwroot\Home\img\portfolio\web3.jpg"/>
+        <None Include="wwwroot\Home\img\quote-sign-left.png"/>
+        <None Include="wwwroot\Home\img\quote-sign-right.png"/>
+        <None Include="wwwroot\Home\img\team-1.jpg"/>
+        <None Include="wwwroot\Home\img\team-2.jpg"/>
+        <None Include="wwwroot\Home\img\team-3.jpg"/>
+        <None Include="wwwroot\Home\img\team-4.jpg"/>
+        <None Include="wwwroot\Home\img\testimonial-1.jpg"/>
+        <None Include="wwwroot\Home\img\testimonial-2.jpg"/>
+        <None Include="wwwroot\Home\img\testimonial-3.jpg"/>
+        <None Include="wwwroot\Home\img\testimonial-4.jpg"/>
+        <None Include="wwwroot\Home\img\testimonial-5.jpg"/>
+        <None Include="wwwroot\Home\js\main.js"/>
+        <None Include="wwwroot\Home\lib\animate\animate.css"/>
+        <None Include="wwwroot\Home\lib\animate\animate.min.css"/>
+        <None Include="wwwroot\Home\lib\bootstrap\css\bootstrap.css"/>
+        <None Include="wwwroot\Home\lib\bootstrap\css\bootstrap.min.css"/>
+        <None Include="wwwroot\Home\lib\bootstrap\js\bootstrap.bundle.min.js"/>
+        <None Include="wwwroot\Home\lib\bootstrap\js\bootstrap.min.js"/>
+        <None Include="wwwroot\Home\lib\counterup\counterup.min.js"/>
+        <None Include="wwwroot\Home\lib\easing\easing.js"/>
+        <None Include="wwwroot\Home\lib\easing\easing.min.js"/>
+        <None Include="wwwroot\Home\lib\font-awesome\css\font-awesome.css"/>
+        <None Include="wwwroot\Home\lib\font-awesome\css\font-awesome.min.css"/>
+        <None Include="wwwroot\Home\lib\font-awesome\fonts\fontawesome-webfont.eot"/>
+        <None Include="wwwroot\Home\lib\font-awesome\fonts\fontawesome-webfont.svg"/>
+        <None Include="wwwroot\Home\lib\font-awesome\fonts\fontawesome-webfont.ttf"/>
+        <None Include="wwwroot\Home\lib\font-awesome\fonts\fontawesome-webfont.woff"/>
+        <None Include="wwwroot\Home\lib\font-awesome\fonts\fontawesome-webfont.woff2"/>
+        <None Include="wwwroot\Home\lib\font-awesome\fonts\FontAwesome.otf"/>
+        <None Include="wwwroot\Home\lib\ionicons\css\ionicons.css"/>
+        <None Include="wwwroot\Home\lib\ionicons\css\ionicons.min.css"/>
+        <None Include="wwwroot\Home\lib\ionicons\fonts\ionicons.eot"/>
+        <None Include="wwwroot\Home\lib\ionicons\fonts\ionicons.svg"/>
+        <None Include="wwwroot\Home\lib\ionicons\fonts\ionicons.ttf"/>
+        <None Include="wwwroot\Home\lib\ionicons\fonts\ionicons.woff"/>
+        <None Include="wwwroot\Home\lib\isotope\isotope.pkgd.js"/>
+        <None Include="wwwroot\Home\lib\isotope\isotope.pkgd.min.js"/>
+        <None Include="wwwroot\Home\lib\jquery\jquery-migrate.min.js"/>
+        <None Include="wwwroot\Home\lib\jquery\jquery.min.js"/>
+        <None Include="wwwroot\Home\lib\lightbox\css\lightbox.css"/>
+        <None Include="wwwroot\Home\lib\lightbox\css\lightbox.min.css"/>
+        <None Include="wwwroot\Home\lib\lightbox\images\close.png"/>
+        <None Include="wwwroot\Home\lib\lightbox\images\loading.gif"/>
+        <None Include="wwwroot\Home\lib\lightbox\images\next.png"/>
+        <None Include="wwwroot\Home\lib\lightbox\images\prev.png"/>
+        <None Include="wwwroot\Home\lib\lightbox\js\lightbox.js"/>
+        <None Include="wwwroot\Home\lib\lightbox\js\lightbox.min.js"/>
+        <None Include="wwwroot\Home\lib\lightbox\links.php"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\ajax-loader.gif"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\owl.carousel.css"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\owl.carousel.min.css"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\owl.theme.default.css"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\owl.theme.default.min.css"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\owl.theme.green.css"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\owl.theme.green.min.css"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\assets\owl.video.play.png"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\LICENSE"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\owl.carousel.js"/>
+        <None Include="wwwroot\Home\lib\owlcarousel\owl.carousel.min.js"/>
+        <None Include="wwwroot\Home\lib\superfish\hoverIntent.js"/>
+        <None Include="wwwroot\Home\lib\superfish\superfish.js"/>
+        <None Include="wwwroot\Home\lib\superfish\superfish.min.js"/>
+        <None Include="wwwroot\Home\lib\touchSwipe\jquery.touchSwipe.js"/>
+        <None Include="wwwroot\Home\lib\touchSwipe\jquery.touchSwipe.min.js"/>
+        <None Include="wwwroot\Home\lib\waypoints\links.php"/>
+        <None Include="wwwroot\Home\lib\waypoints\waypoints.min.js"/>
+        <None Include="wwwroot\Home\lib\wow\wow.js"/>
+        <None Include="wwwroot\Home\lib\wow\wow.min.js"/>
     </ItemGroup>
 
 </Project>

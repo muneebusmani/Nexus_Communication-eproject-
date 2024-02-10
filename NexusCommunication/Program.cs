@@ -1,8 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
 using NexusCommunication.Data;
-using NexusCommunication.Interfaces;
-using NexusCommunication.Repositories;
 
 namespace NexusCommunication;
 
@@ -23,14 +21,6 @@ public static class Program
 
         builder.Services.AddDbContext<ApplicationDbContext>(option =>
             option.UseSqlServer(connectionString));
-
-        #endregion
-
-        #region Repositories
-
-        builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-        builder.Services.AddTransient<ICustomerRepository, CustomerRepository>();
-        builder.Services.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
 
         #endregion
 
@@ -56,10 +46,10 @@ public static class Program
         app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthorization();
-        // app.MapControllerRoute(
-        //     "default",
-        //     "{controller=Home}/{action=Index}/{id?}"
-        // );
+        app.MapControllerRoute(
+            "default",
+            "{controller=Home}/{action=Index}/{id?}"
+        );
         app.MapControllerRoute(
             "areas",
             "{area:exists}/{controller=Home}/{action=Index}/{id?}"

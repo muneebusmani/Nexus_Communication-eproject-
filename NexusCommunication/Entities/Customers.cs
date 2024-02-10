@@ -8,7 +8,7 @@ namespace NexusCommunication.Entities;
 [Index(nameof(AccountId), IsUnique = true)]
 public class Customers
 {
-    [Required] public int Id { get; set; }
+    [Key] [Required] public int CustomerId { get; set; }
 
     [Required]
     [StringLength(255)]

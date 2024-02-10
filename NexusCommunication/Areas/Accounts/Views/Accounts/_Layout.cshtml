@@ -20,7 +20,7 @@
 <body>
 <div class="wrapper">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="height: 100vh">
             <nav class="col-md-2 d-none d-md-block sidebar bg-light p-0">
                 <div class="sidebar-sticky h-100">
                     <a href="#" class="w-100">
@@ -86,12 +86,12 @@
                     </ul>
                 </div>
             </nav>
-
+            <main class="col-10">
+                @RenderBody()
+            </main>
         </div>
     </div>
 </div>
-
-@RenderBody()
 
 <script
     src="https://code.jquery.com/jquery-3.7.1.slim.min.js"

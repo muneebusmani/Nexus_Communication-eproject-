@@ -8,5 +8,4 @@ public class Billing
     [Required] public string CustomerId { get; set; } = "";
     [Required] public string OrderId { get; set; } = "";
     [Required] public string BillAmount { get; set; } = "";
-    [Required] public string PaymentDetails { get; set; } = "";
 }

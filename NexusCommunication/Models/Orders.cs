@@ -4,9 +4,9 @@ namespace NexusCommunication.Models;
 
 public class Orders
 {
-    [Required] [Key] public int OrderId { get; set; }
+    [Key] public int OrderId { get; set; }
 
-    [CustomValidation(typeof(Orders), "ValidateType", ErrorMessage = "Invalid Prefix")]
+    [CustomValidation(typeof(Orders), "ValidateType", ErrorMessage = "Invalid Prefix, choose one from D ,T ,B")]
     [Required]
     public char OrderIdPrefix { get; set; }
 
@@ -17,7 +17,7 @@ public class Orders
 
     public static bool ValidateType(string OrderIdPrefix)
     {
-        List<String> OrderTypes = new() { "D", "T", "B" };
-        return OrderTypes.Contains(OrderIdPrefix);
+        List<String> orderTypes = ["D", "T", "B"];
+        return orderTypes.Contains(OrderIdPrefix);
     }
 }
