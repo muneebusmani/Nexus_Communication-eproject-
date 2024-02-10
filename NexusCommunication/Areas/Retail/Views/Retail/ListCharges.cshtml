@@ -1,0 +1,47 @@
+@model IEnumerable<NexusCommunication.Models.Charges>
+
+@{
+    ViewData["Title"] = "ListCharges";
+}
+
+<h1>ListCharges</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConnectionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlanDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecurityDeposit)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConnectionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlanDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecurityDeposit)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ChargeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ChargeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ChargeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
