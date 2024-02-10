@@ -31,7 +31,7 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Areas\Retail\Views\Retail\"/>
-        <Folder Include="Areas\Tech\Views\Tech\"/>
+        <Folder Include="Areas\Tech\Views\Tech\Connections\" />
     </ItemGroup>
 
 </Project>
